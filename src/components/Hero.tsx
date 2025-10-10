@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, Suspense } from "react";
 import { Github, Linkedin, Instagram, FileText, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImage from "@/assets/profile-placeholder.jpg";
+import { DataParticles3D } from "./DataParticles3D";
 import gsap from "gsap";
 
 export const Hero = () => {
@@ -55,8 +56,13 @@ export const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden"
     >
+      {/* 3D Data Particles Background */}
+      <Suspense fallback={null}>
+        <DataParticles3D />
+      </Suspense>
+      
       {/* Animated background gradient */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
       </div>
