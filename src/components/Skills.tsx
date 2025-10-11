@@ -33,292 +33,124 @@ import englishIcon from "../assets/English.png";
 import chineseIcon from "../assets/Chinese.png";
 import sparkIcon from "../assets/Spark.png";
 import databricksIcon from "../assets/databricks.png";
+import vueicon from "../assets/vue.png";
+import pandasIcon from "../assets/Pandas.png";
+import pytorchIcon from "../assets/pytorch.png";
+import numpyIcon from "../assets/numpy.png";
 
-const skillCategories = [
+// Icon mapping for easy reference
+const icons = {
+  pythonIcon,
+  sqlIcon,
+  javascriptIcon,
+  htmlIcon,
+  cssIcon,
+  phpIcon,
+  tableauIcon,
+  matplotlibIcon,
+  seabornIcon,
+  scikitIcon,
+  bigqueryIcon,
+  bootstrapIcon,
+  regressionIcon,
+  decisionTreesIcon,
+  clusteringIcon,
+  ensembleIcon,
+  supabaseIcon,
+  githubIcon,
+  gitIcon,
+  gitlabIcon,
+  confluenceIcon,
+  dbeaverIcon,
+  pgadminIcon,
+  sapSignavioIcon,
+  englishIcon,
+  chineseIcon,
+  sparkIcon,
+  databricksIcon,
+  vueicon,
+  pandasIcon,
+  pytorchIcon,
+  numpyIcon,
+};
+
+// Skill data configuration - easy to add/modify
+const skillsData = [
   {
     category: "Programming Languages",
     skills: [
-      {
-        name: "Python",
-        icon: (
-          <img
-            src={pythonIcon}
-            alt="Python"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "SQL",
-        icon: (
-          <img src={sqlIcon} alt="SQL" className="w-14 h-14 object-contain" />
-        ),
-      },
-      {
-        name: "PySpark",
-        icon: (
-          <img src={sparkIcon} alt="PySpark" className="w-14 h-14 object-contain" />
-        ),
-      },
-      {
-        name: "JavaScript",
-        icon: (
-          <img
-            src={javascriptIcon}
-            alt="JavaScript"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "HTML",
-        icon: (
-          <img src={htmlIcon} alt="HTML" className="w-14 h-14 object-contain" />
-        ),
-      },
-      {
-        name: "CSS",
-        icon: (
-          <img src={cssIcon} alt="CSS" className="w-14 h-14 object-contain" />
-        ),
-      },
-      {
-        name: "Bootstrap",
-        icon: (
-          <img
-            src={bootstrapIcon}
-            alt="Bootstrap"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "PHP",
-        icon: (
-          <img src={phpIcon} alt="PHP" className="w-14 h-14 object-contain" />
-        ),
-      },
+      { name: "Python", icon: "pythonIcon" },
+      { name: "SQL", icon: "sqlIcon" },
+      { name: "PySpark", icon: "sparkIcon" },
+      { name: "JavaScript", icon: "javascriptIcon" },
+      { name: "Vue.js", icon: "vueicon" },
+      { name: "HTML", icon: "htmlIcon" },
+      { name: "CSS", icon: "cssIcon" },
+      { name: "Bootstrap", icon: "bootstrapIcon" },
+      { name: "PHP", icon: "phpIcon" },
     ],
   },
   {
-    category: "Data Visualization",
+    category: "Data & Data Tools",
     skills: [
-      {
-        name: "Matplotlib",
-        icon: (
-          <img
-            src={matplotlibIcon}
-            alt="Matplotlib"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Seaborn",
-        icon: (
-          <img
-            src={seabornIcon}
-            alt="Seaborn"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Tableau",
-        icon: (
-          <img
-            src={tableauIcon}
-            alt="Tableau"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
+      { name: "Pandas", icon: "pandasIcon" },
+      { name: "PySpark", icon: "sparkIcon" },
+      { name: "Databricks", icon: "databricksIcon" },
+      { name: "Matplotlib", icon: "matplotlibIcon" },
+      { name: "Seaborn", icon: "seabornIcon" },
+      { name: "Tableau", icon: "tableauIcon" },
+      { name: "NumPy", icon: "numpyIcon" },
+      { name: "DBeaver", icon: "dbeaverIcon" },
+      { name: "PgAdmin", icon: "pgadminIcon" },
     ],
   },
   {
     category: "Machine Learning",
     skills: [
-      {
-        name: "Scikit-Learn",
-        icon: (
-          <img
-            src={scikitIcon}
-            alt="Scikit-Learn"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Regression",
-        icon: (
-          <img
-            src={regressionIcon}
-            alt="Regression"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Decision Trees",
-        icon: (
-          <img
-            src={decisionTreesIcon}
-            alt="Decision Trees"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Clustering",
-        icon: (
-          <img
-            src={clusteringIcon}
-            alt="Clustering"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Ensemble",
-        icon: (
-          <img
-            src={ensembleIcon}
-            alt="Ensemble"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
+      { name: "Pytorch", icon: "pytorchIcon" },
+
+      { name: "Scikit-Learn", icon: "scikitIcon" },
+      { name: "Regression", icon: "regressionIcon" },
+      { name: "Decision Trees", icon: "decisionTreesIcon" },
+      { name: "Clustering", icon: "clusteringIcon" },
+      { name: "Ensemble Learning", icon: "ensembleIcon" },
     ],
   },
   {
     category: "Tools",
     skills: [
-      {
-        name: "Github",
-        icon: (
-          <img
-            src={githubIcon}
-            alt="Github"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Git",
-        icon: (
-          <img src={gitIcon} alt="Git" className="w-14 h-14 object-contain" />
-        ),
-      },
-      {
-        name: "Gitlab",
-        icon: (
-          <img
-            src={gitlabIcon}
-            alt="Gitlab"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-       {
-        name: "Databricks",
-        icon: (
-          <img
-            src={databricksIcon}
-            alt="Databricks"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "BigQuery",
-        icon: (
-          <img
-            src={bigqueryIcon}
-            alt="BigQuery"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Supabase",
-        icon: (
-          <img
-            src={supabaseIcon}
-            alt="Supabase"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      
-
-      {
-        name: "SAP Signavio",
-        icon: (
-          <img
-            src={sapSignavioIcon}
-            alt="SAP Signavio"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Confluence",
-        icon: (
-          <img
-            src={confluenceIcon}
-            alt="Confluence"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "DBeaver",
-        icon: (
-          <img
-            src={dbeaverIcon}
-            alt="DBeaver"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "PgAdmin",
-        icon: (
-          <img
-            src={pgadminIcon}
-            alt="PgAdmin"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
+      { name: "Github", icon: "githubIcon" },
+      { name: "Git", icon: "gitIcon" },
+      { name: "Gitlab", icon: "gitlabIcon" },
+      { name: "BigQuery", icon: "bigqueryIcon" },
+      { name: "Supabase", icon: "supabaseIcon" },
+      { name: "SAP Signavio", icon: "sapSignavioIcon" },
+      { name: "Confluence", icon: "confluenceIcon" },
     ],
   },
   {
     category: "Languages",
     skills: [
-      {
-        name: "English",
-        icon: (
-          <img
-            src={englishIcon}
-            alt="English"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
-      {
-        name: "Mandarin",
-        icon: (
-          <img
-            src={chineseIcon}
-            alt="Mandarin"
-            className="w-14 h-14 object-contain"
-          />
-        ),
-      },
+      { name: "English", icon: "englishIcon" },
+      { name: "Mandarin", icon: "chineseIcon" },
     ],
   },
 ];
+
+// Generate skill categories with icons
+const skillCategories = skillsData.map((category) => ({
+  category: category.category,
+  skills: category.skills.map((skill) => ({
+    name: skill.name,
+    icon: (
+      <img
+        src={icons[skill.icon as keyof typeof icons]}
+        alt={skill.name}
+        className="w-14 h-14 object-contain"
+      />
+    ),
+  })),
+}));
 
 export const Skills = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
