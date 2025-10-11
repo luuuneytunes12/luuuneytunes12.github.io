@@ -10,8 +10,15 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
 
       // Update active section based on scroll position
-      const sections = ["home", "about", "experience", "projects", "skills", "contact"];
-      const current = sections.find(section => {
+      const sections = [
+        "home",
+        "about",
+        "experience",
+        "projects",
+        "skills",
+        "contact",
+      ];
+      const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -19,7 +26,7 @@ export const Navbar = () => {
         }
         return false;
       });
-      
+
       if (current) setActiveSection(current);
     };
 
@@ -36,7 +43,7 @@ export const Navbar = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -59,9 +66,9 @@ export const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <button
           onClick={() => scrollToSection("home")}
-          className="font-signature text-3xl md:text-4xl gradient-text hover:scale-105 transition-transform duration-300"
+          className="font-signature text-3xl md:text-4xl hover:scale-105 transition-transform duration-300 gradient-text"
         >
-          Your Name
+          Cheng Wei Lun
         </button>
 
         <div className="hidden md:flex items-center gap-8">

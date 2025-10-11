@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
-    title: "Sales Forecasting Dashboard",
+    title: "Credit Risk Loan Default Modeling",
     description: "Interactive dashboard for predicting sales trends using time series analysis and machine learning models.",
     image: project1,
     tech: ["Python", "Pandas", "Scikit-learn", "Tableau"],
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Customer Segmentation Analysis",
+    title: "BI Dashboard for Bikes Logistics ",
     description: "ML-powered customer segmentation using clustering algorithms to identify distinct customer groups.",
     image: project2,
     tech: ["Python", "NumPy", "K-Means", "Plotly"],
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Predictive Maintenance System",
+    title: "Fitness Tracker Analysis",
     description: "AI system to predict equipment failures and optimize maintenance schedules using IoT sensor data.",
     image: project3,
     tech: ["Python", "TensorFlow", "SQL", "Power BI"],

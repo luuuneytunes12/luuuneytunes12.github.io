@@ -4,50 +4,318 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Import icons - all available images from assets folder
+import pythonIcon from "../assets/Python.png";
+import sqlIcon from "../assets/SQL.png";
+import javascriptIcon from "../assets/JavaScript.png";
+import htmlIcon from "../assets/html-5.png";
+import cssIcon from "../assets/CSS.png";
+import phpIcon from "../assets/php.png";
+import tableauIcon from "../assets/Tableau.png";
+import matplotlibIcon from "../assets/Matplotlib.png";
+import seabornIcon from "../assets/seaborn-1.svg";
+import scikitIcon from "../assets/Scikit_learn.png";
+import bigqueryIcon from "../assets/BigQuery.png";
+import bootstrapIcon from "../assets/Bootstrap.png";
+import regressionIcon from "../assets/Regression.png";
+import decisionTreesIcon from "../assets/DecisionTrees.png";
+import clusteringIcon from "../assets/Clustering.png";
+import ensembleIcon from "../assets/Ensemble.png";
+import supabaseIcon from "../assets/Supabase.png";
+import githubIcon from "../assets/Github.png";
+import gitIcon from "../assets/Git_icon.svg.png";
+import gitlabIcon from "../assets/GitLab_icon.svg.png";
+import confluenceIcon from "../assets/Confluence.png";
+import dbeaverIcon from "../assets/Bronze_DBeaver.jpg";
+import pgadminIcon from "../assets/Pgadmin.png";
+import sapSignavioIcon from "../assets/SAP.jpg";
+import englishIcon from "../assets/English.png";
+import chineseIcon from "../assets/Chinese.png";
+import sparkIcon from "../assets/Spark.png";
+import databricksIcon from "../assets/databricks.png";
+
 const skillCategories = [
   {
-    category: "Programming",
+    category: "Programming Languages",
     skills: [
-      { name: "Python", icon: "🐍" },
-      { name: "R", icon: "📊" },
-      { name: "SQL", icon: "🗄️" },
-      { name: "JavaScript", icon: "💛" },
-    ],
-  },
-  {
-    category: "Machine Learning",
-    skills: [
-      { name: "Scikit-learn", icon: "🤖" },
-      { name: "TensorFlow", icon: "🧠" },
-      { name: "PyTorch", icon: "🔥" },
-      { name: "Keras", icon: "⚡" },
+      {
+        name: "Python",
+        icon: (
+          <img
+            src={pythonIcon}
+            alt="Python"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "SQL",
+        icon: (
+          <img src={sqlIcon} alt="SQL" className="w-14 h-14 object-contain" />
+        ),
+      },
+      {
+        name: "PySpark",
+        icon: (
+          <img src={sparkIcon} alt="PySpark" className="w-14 h-14 object-contain" />
+        ),
+      },
+      {
+        name: "JavaScript",
+        icon: (
+          <img
+            src={javascriptIcon}
+            alt="JavaScript"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "HTML",
+        icon: (
+          <img src={htmlIcon} alt="HTML" className="w-14 h-14 object-contain" />
+        ),
+      },
+      {
+        name: "CSS",
+        icon: (
+          <img src={cssIcon} alt="CSS" className="w-14 h-14 object-contain" />
+        ),
+      },
+      {
+        name: "Bootstrap",
+        icon: (
+          <img
+            src={bootstrapIcon}
+            alt="Bootstrap"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "PHP",
+        icon: (
+          <img src={phpIcon} alt="PHP" className="w-14 h-14 object-contain" />
+        ),
+      },
     ],
   },
   {
     category: "Data Visualization",
     skills: [
-      { name: "Tableau", icon: "📈" },
-      { name: "Power BI", icon: "📊" },
-      { name: "Matplotlib", icon: "🎨" },
-      { name: "Plotly", icon: "📉" },
+      {
+        name: "Matplotlib",
+        icon: (
+          <img
+            src={matplotlibIcon}
+            alt="Matplotlib"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Seaborn",
+        icon: (
+          <img
+            src={seabornIcon}
+            alt="Seaborn"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Tableau",
+        icon: (
+          <img
+            src={tableauIcon}
+            alt="Tableau"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
     ],
   },
   {
-    category: "Data Tools",
+    category: "Machine Learning",
     skills: [
-      { name: "Pandas", icon: "🐼" },
-      { name: "NumPy", icon: "🔢" },
-      { name: "Apache Spark", icon: "⚡" },
-      { name: "Excel", icon: "📊" },
+      {
+        name: "Scikit-Learn",
+        icon: (
+          <img
+            src={scikitIcon}
+            alt="Scikit-Learn"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Regression",
+        icon: (
+          <img
+            src={regressionIcon}
+            alt="Regression"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Decision Trees",
+        icon: (
+          <img
+            src={decisionTreesIcon}
+            alt="Decision Trees"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Clustering",
+        icon: (
+          <img
+            src={clusteringIcon}
+            alt="Clustering"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Ensemble",
+        icon: (
+          <img
+            src={ensembleIcon}
+            alt="Ensemble"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
     ],
   },
   {
-    category: "Cloud & Dev Tools",
+    category: "Tools",
     skills: [
-      { name: "AWS", icon: "☁️" },
-      { name: "Docker", icon: "🐳" },
-      { name: "Git", icon: "🌿" },
-      { name: "Jupyter", icon: "📓" },
+      {
+        name: "Github",
+        icon: (
+          <img
+            src={githubIcon}
+            alt="Github"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Git",
+        icon: (
+          <img src={gitIcon} alt="Git" className="w-14 h-14 object-contain" />
+        ),
+      },
+      {
+        name: "Gitlab",
+        icon: (
+          <img
+            src={gitlabIcon}
+            alt="Gitlab"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+       {
+        name: "Databricks",
+        icon: (
+          <img
+            src={databricksIcon}
+            alt="Databricks"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "BigQuery",
+        icon: (
+          <img
+            src={bigqueryIcon}
+            alt="BigQuery"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Supabase",
+        icon: (
+          <img
+            src={supabaseIcon}
+            alt="Supabase"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      
+
+      {
+        name: "SAP Signavio",
+        icon: (
+          <img
+            src={sapSignavioIcon}
+            alt="SAP Signavio"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Confluence",
+        icon: (
+          <img
+            src={confluenceIcon}
+            alt="Confluence"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "DBeaver",
+        icon: (
+          <img
+            src={dbeaverIcon}
+            alt="DBeaver"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "PgAdmin",
+        icon: (
+          <img
+            src={pgadminIcon}
+            alt="PgAdmin"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+    ],
+  },
+  {
+    category: "Languages",
+    skills: [
+      {
+        name: "English",
+        icon: (
+          <img
+            src={englishIcon}
+            alt="English"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
+      {
+        name: "Mandarin",
+        icon: (
+          <img
+            src={chineseIcon}
+            alt="Mandarin"
+            className="w-14 h-14 object-contain"
+          />
+        ),
+      },
     ],
   },
 ];
@@ -61,7 +329,7 @@ export const Skills = () => {
 
     const ctx = gsap.context(() => {
       const cards = gridRef.current?.querySelectorAll(".skill-card");
-      
+
       gsap.fromTo(
         cards,
         { opacity: 0, scale: 0.8, y: 30 },
@@ -107,12 +375,14 @@ export const Skills = () => {
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="skill-card card-gradient p-6 rounded-xl flex flex-col items-center justify-center gap-3 group hover:scale-105 transition-all duration-300 cursor-pointer"
+                    className="skill-card card-gradient px-8 py-6 rounded-xl flex flex-col items-center justify-center gap-3 group hover:scale-105 transition-all duration-300 cursor-pointer"
                   >
-                    <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                      {skill.icon}
-                    </span>
-                    <span className="text-sm font-medium text-center">
+                    <div className="h-16 flex items-center justify-center">
+                      <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
+                        {skill.icon}
+                      </span>
+                    </div>
+                    <span className="text-base font-medium text-center">
                       {skill.name}
                     </span>
                   </div>

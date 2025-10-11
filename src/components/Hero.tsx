@@ -1,7 +1,7 @@
 import { useEffect, useRef, Suspense } from "react";
 import { Github, Linkedin, Instagram, FileText, Mail } from "lucide-react";
 import { Button } from "./ui/button";
-import profileImage from "@/assets/profile-placeholder.jpg";
+import profileImage from "@/assets/profile-placeholder.jpeg";
 import { DataParticles3D } from "./DataParticles3D";
 import gsap from "gsap";
 
@@ -19,7 +19,7 @@ export const Hero = () => {
           y: 0,
           duration: 0.8,
           stagger: 0.15,
-          ease: "power3.out"
+          ease: "power3.out",
         }
       );
     }
@@ -32,16 +32,28 @@ export const Hero = () => {
           opacity: 1,
           scale: 1,
           duration: 1,
-          ease: "back.out(1.4)"
+          ease: "back.out(1.4)",
         }
       );
     }
   }, []);
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    {
+      icon: Github,
+      href: "https://github.com/luuuneytunes12",
+      label: "GitHub",
+    },
+    {
+      icon: Linkedin,
+      href: "www.linkedin.com/in/cheng-wei-lun",
+      label: "LinkedIn",
+    },
+    {
+      icon: Instagram,
+      href: "https://instagram.com/luuuney_tunes",
+      label: "Instagram",
+    },
   ];
 
   const scrollToContact = () => {
@@ -60,11 +72,14 @@ export const Hero = () => {
       <Suspense fallback={null}>
         <DataParticles3D />
       </Suspense>
-      
+
       {/* Animated background gradient */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        <div
+          className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow"
+          style={{ animationDelay: "1s" }}
+        />
       </div>
 
       <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
@@ -73,17 +88,16 @@ export const Hero = () => {
           <div className="space-y-2">
             <p className="text-muted-foreground text-lg">Hello, I'm</p>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
-              Your Name
+              Cheng Wei Lun
             </h1>
-            <p className="text-xl md:text-2xl gradient-text font-semibold">
-              Data Scientist | Analyst | ML Enthusiast
+            <br></br>
+            <p className="text-xl md:text-3xl gradient-text font-bold">
+              Aspiring Data Scientist | ML Enthusiast
             </p>
           </div>
 
           <p className="text-muted-foreground text-lg max-w-lg leading-relaxed">
-            Transforming data into actionable insights with machine learning, 
-            statistical analysis, and compelling visualizations. Passionate about 
-            solving complex problems through data-driven approaches.
+           Welcome to my personal website! 💫
           </p>
 
           {/* Social Icons */}

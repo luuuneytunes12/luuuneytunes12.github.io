@@ -62,7 +62,8 @@ export const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Passionate about extracting meaningful insights from data
+            Passionate about extracting meaningful insights from data <br></br>&
+            building robust ML models
           </p>
         </div>
 
@@ -70,35 +71,49 @@ export const About = () => {
           {/* Content */}
           <div ref={contentRef} className="space-y-6">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I'm a data scientist with a strong foundation in statistical analysis, 
-              machine learning, and data visualization. My journey in data science 
-              began with a fascination for patterns and a drive to solve real-world 
-              problems through data-driven insights.
+              Hello, I’m Wei Lun! I’m a Year 3 Business Analytics student at
+              Singapore Management University (SMU) with a strong passion for
+              machine learning, data science, and analytical problem-solving.
             </p>
-            
+
             <p className="text-lg leading-relaxed text-muted-foreground">
-              With expertise in Python, SQL, and modern ML frameworks, I've worked 
-              on diverse projects ranging from predictive modeling to business 
-              intelligence dashboards. I believe in the power of data to transform 
-              decision-making and drive innovation.
+              I’m an aspiring data scientist skilled in Python, SQL, and
+              Scikit-Learn, with hands-on experience across the data lifecycle —
+              from data engineering and analysis to model development and
+              visualisation. Constantly seeking new ways to leverage data for
+              better decision-making and innovation, I bring the determination
+              and reliability of a Taurus.
+            </p>
+
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Fluent in both English and Mandarin, I value clear communication
+              and cross-cultural collaboration, which enables me to translate
+              complex data insights into actionable strategies for diverse teams
+              and stakeholders. I take pride in transforming ideas into
+              impactful, data-driven solutions that enhance performance and
+              create lasting value.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold gradient-text">5+</h3>
+                <h3 className="text-3xl font-bold gradient-text">3+</h3>
                 <p className="text-muted-foreground">Projects Completed</p>
               </div>
               <div className="space-y-2">
                 <h3 className="text-3xl font-bold gradient-text">3+</h3>
-                <p className="text-muted-foreground">Years Experience</p>
+                <p className="text-muted-foreground">
+                  Years Experience in Developing
+                </p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold gradient-text">10+</h3>
+                <h3 className="text-3xl font-bold gradient-text">20+</h3>
                 <p className="text-muted-foreground">Technologies</p>
               </div>
               <div className="space-y-2">
                 <h3 className="text-3xl font-bold gradient-text">100%</h3>
-                <p className="text-muted-foreground">Client Satisfaction</p>
+                <p className="text-muted-foreground">
+                  Running on Coffee & Curiosity
+                </p>
               </div>
             </div>
           </div>

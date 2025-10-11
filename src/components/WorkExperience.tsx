@@ -8,30 +8,30 @@ gsap.registerPlugin(ScrollTrigger);
 const experiences = [
   {
     id: 1,
-    title: "Senior Data Scientist",
-    company: "Tech Innovation Labs",
-    period: "Jan 2023 - Present",
-    location: "San Francisco, CA",
+    title: "Data Engineer Intern",
+    company: "Hyundai Motor Group Innovation Center (HMGICS)",
+    period: "July 2025 - Present",
+    location: "Singapore",
     description:
       "Leading ML initiatives for predictive analytics platform. Developed ensemble models achieving 95% accuracy in customer churn prediction. Mentoring team of 3 junior data scientists.",
     color: "from-blue-500 to-cyan-500",
   },
   {
     id: 2,
-    title: "Data Scientist",
-    company: "Analytics Solutions Inc.",
-    period: "Jun 2021 - Dec 2022",
-    location: "Boston, MA",
+    title: "Web Dev Teaching Assistant",
+    company: "Singapore Management University",
+    period: "Jan 2025 - May 2025",
+    location: "Singapore",
     description:
       "Built recommendation systems using collaborative filtering and deep learning. Optimized SQL queries reducing dashboard load time by 60%. Deployed models to production using Docker and AWS.",
     color: "from-cyan-500 to-blue-600",
   },
   {
     id: 3,
-    title: "Junior Data Analyst",
-    company: "DataCorp Industries",
-    period: "Jul 2020 - May 2021",
-    location: "New York, NY",
+    title: "Mandarin Tutor",
+    company: "School of Language & Communication",
+    period: "Dec 2022 - Jun 2023",
+    location: "Singapore",
     description:
       "Conducted exploratory data analysis and created interactive dashboards in Tableau. Automated reporting workflows with Python reducing manual work by 40%. Collaborated with cross-functional teams.",
     color: "from-blue-600 to-indigo-600",
@@ -69,10 +69,10 @@ export const WorkExperience = () => {
         if (card) {
           gsap.fromTo(
             card,
-            { 
-              opacity: 0, 
+            {
+              opacity: 0,
               x: index % 2 === 0 ? -50 : 50,
-              scale: 0.9 
+              scale: 0.9,
             },
             {
               opacity: 1,
@@ -111,7 +111,7 @@ export const WorkExperience = () => {
             Work <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            My journey in data science and analytics
+            My journey thus far
           </p>
         </div>
 
@@ -138,15 +138,23 @@ export const WorkExperience = () => {
                 {/* Timeline dot */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
                   <div className="relative">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${exp.color} flex items-center justify-center shadow-lg ring-4 ring-background`}>
+                    <div
+                      className={`w-16 h-16 rounded-full bg-gradient-to-br ${exp.color} flex items-center justify-center shadow-lg ring-4 ring-background`}
+                    >
                       <Briefcase className="w-8 h-8 text-white" />
                     </div>
-                    <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${exp.color} blur-xl opacity-50 animate-pulse-glow`} />
+                    <div
+                      className={`absolute inset-0 rounded-full bg-gradient-to-br ${exp.color} blur-xl opacity-50 animate-pulse-glow`}
+                    />
                   </div>
                 </div>
 
                 {/* Content card */}
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-16" : "md:pl-16"}`}>
+                <div
+                  className={`w-full md:w-5/12 ${
+                    index % 2 === 0 ? "md:pr-16" : "md:pl-16"
+                  }`}
+                >
                   <div className="card-gradient p-6 rounded-2xl hover:scale-105 transition-all duration-300 group">
                     <div className="space-y-3">
                       <div className="flex items-start justify-between gap-4">
@@ -159,7 +167,7 @@ export const WorkExperience = () => {
                           </p>
                         </div>
                       </div>
-                      
+
                       <div className="flex flex-wrap gap-2 text-sm text-muted-foreground">
                         <span className="px-3 py-1 rounded-full bg-secondary">
                           {exp.period}

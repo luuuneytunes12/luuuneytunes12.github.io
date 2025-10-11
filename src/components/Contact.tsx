@@ -13,7 +13,7 @@ export const Contact = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +46,7 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simple validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
@@ -68,10 +68,23 @@ export const Contact = () => {
       return;
     }
 
+    // Create mailto link to send email to wlunlun1212@gmail.com
+    const subject = encodeURIComponent(
+      `Portfolio Contact: Message from ${formData.name}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoUrl = `mailto:wlunlun1212@gmail.com?subject=${subject}&body=${body}`;
+
+    // Open default email client
+    window.location.href = mailtoUrl;
+
     // Success feedback
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
+      title: "Email Client Opened!",
+      description:
+        "Your default email client should open with the message pre-filled.",
     });
 
     // Reset form
@@ -90,21 +103,21 @@ export const Contact = () => {
   const socialLinks = [
     {
       icon: Mail,
-      href: "mailto:your.email@example.com",
+      href: "mailto:wlunlun1212@gmail.com",
       label: "Email",
-      text: "your.email@example.com",
+      text: "wlunlun1212@gmail.com",
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://linkedin.com/in/cheng-wei-lun",
       label: "LinkedIn",
-      text: "linkedin.com/in/yourprofile",
+      text: "linkedin.com/in/cheng-wei-lun",
     },
     {
       icon: Github,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/luuuneytunes12",
       label: "GitHub",
-      text: "github.com/yourusername",
+      text: "github.com/luuuneytunes12",
     },
   ];
 
@@ -116,7 +129,9 @@ export const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Let's discuss your data science needs or potential collaborations
+            I would love to discuss how my skills and enthusiasm can support
+            your team’s goals and add value to your ongoing data science &
+            machine learning projects.
           </p>
         </div>
 
@@ -126,9 +141,8 @@ export const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I'm always open to discussing data science projects, 
-                consulting opportunities, or simply connecting with fellow 
-                data enthusiasts. Feel free to reach out!
+                I'm always open to discussing data science projects, or simply
+                connecting with fellow data enthusiasts. Feel free to reach out!
               </p>
             </div>
 
@@ -168,8 +182,9 @@ export const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Your Name"
-                className="bg-background"
+                placeholder="Your full name"
+                className="bg-background border-border"
+                required
               />
             </div>
 
@@ -184,7 +199,8 @@ export const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"
-                className="bg-background"
+                className="bg-background border-border"
+                required
               />
             </div>
 
@@ -197,9 +213,10 @@ export const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about your project or how I can help..."
                 rows={5}
-                className="bg-background resize-none"
+                className="bg-background border-border resize-none"
+                required
               />
             </div>
 
