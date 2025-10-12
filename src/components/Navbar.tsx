@@ -13,9 +13,11 @@ export const Navbar = () => {
       const sections = [
         "home",
         "about",
+        "education",
         "experience",
         "projects",
         "skills",
+        "certifications",
         "contact",
       ];
       const current = sections.find((section) => {
@@ -51,9 +53,11 @@ export const Navbar = () => {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
+    { id: "education", label: "Education" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
+    { id: "certifications", label: "Certifications" },
     { id: "contact", label: "Contact" },
   ];
 

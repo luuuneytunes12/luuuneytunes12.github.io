@@ -1,13 +1,24 @@
 import { useEffect, useRef, Suspense } from "react";
 import { Github, Linkedin, Instagram, FileText, Mail } from "lucide-react";
 import { Button } from "./ui/button";
-import profileImage from "@/assets/profile-placeholder.jpeg";
+import { useTheme } from "next-themes";
+import profileImageDark from "@/assets/profile-placeholder.jpeg";
+// TODO: Add light mode profile image as profileImageLight from "@/assets/profile-light.jpg";
+import profileImageLight from "@/assets/profile-light.jpeg";
 import { DataParticles3D } from "./DataParticles3D";
 import gsap from "gsap";
 
 export const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
+  const { theme, resolvedTheme } = useTheme();
+
+  // Use resolvedTheme for better theme detection, fallback to theme, then to 'dark'
+  const currentTheme = resolvedTheme || theme || "dark";
+
+  // Choose profile image based on theme
+  const profileImage =
+    currentTheme === "light" ? profileImageLight : profileImageDark;
 
   useEffect(() => {
     if (heroRef.current) {
@@ -97,7 +108,7 @@ export const Hero = () => {
           </div>
 
           <p className="text-muted-foreground text-lg max-w-lg leading-relaxed">
-           Welcome to my personal website! 💫
+            Welcome to my personal website! 💫
           </p>
 
           {/* Social Icons */}
@@ -120,7 +131,6 @@ export const Hero = () => {
           <div className="flex flex-wrap gap-4 pt-4">
             <Button
               size="lg"
-              variant="gradient"
               className="px-8 hover:scale-105 transition-transform duration-300"
               asChild
             >
@@ -146,9 +156,14 @@ export const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-2xl animate-pulse-glow" />
             <img
+              key={currentTheme} // Force re-render when theme changes
               src={profileImage}
               alt="Profile"
-              className="relative w-80 h-80 md:w-96 md:h-96 rounded-full object-cover shadow-2xl ring-4 ring-primary/20"
+              className="relative w-80 h-80 md:w-90 md:h-90 rounded-full object-cover object-center shadow-2xl ring-4 ring-primary/20"
+              style={{
+                objectPosition: "55% center",
+                transform: "scale(1.6)",
+              }}
             />
           </div>
         </div>
