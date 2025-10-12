@@ -70,23 +70,27 @@ export const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div ref={contentRef} className="space-y-6">
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Hello, I’m Wei Lun! I’m a Year 3 Business Analytics student at
-              Singapore Management University (SMU) with a strong passion for
-              machine learning, data science, and analytical problem-solving.
+            <p className="text-md leading-relaxed text-muted-foreground">
+              Hello, I’m Wei Lun! I’m a{" "}
+              <strong>
+                Year 3 Business Analytics student at Singapore Management
+                University (SMU)
+              </strong>{" "}
+              with a strong passion for machine learning, data science, and
+              analytical problem-solving.
             </p>
 
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              I’m an aspiring data scientist skilled in Python, SQL, and
-              Scikit-Learn, with hands-on experience across the data lifecycle —
-              from data engineering and analysis to model development and
-              visualisation. Constantly seeking new ways to leverage data for
-              better decision-making and innovation, I bring the determination
-              and reliability of a Taurus.
+            <p className="text-md leading-relaxed text-muted-foreground">
+              I’m an <strong>aspiring data scientist</strong> skilled in Python,
+              SQL, and Scikit-Learn, with hands-on experience across the data
+              lifecycle — from <strong>data engineering and analysis to model
+              development and visualisation</strong>. Constantly seeking new ways to
+              leverage data for better decision-making and innovation, I bring
+              the <strong>determination and reliability</strong> of a Taurus.
             </p>
 
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Fluent in both English and Mandarin, I value clear communication
+            <p className="text-md leading-relaxed text-muted-foreground">
+              <strong>Fluent in both English and Mandarin,</strong> I value clear communication
               and cross-cultural collaboration, which enables me to translate
               complex data insights into actionable strategies for diverse teams
               and stakeholders. I take pride in transforming ideas into

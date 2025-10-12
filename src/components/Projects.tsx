@@ -13,29 +13,46 @@ const projects = [
   {
     id: 1,
     title: "Credit Risk Loan Default Modeling",
-    description: "Interactive dashboard for predicting sales trends using time series analysis and machine learning models.",
+    description:
+      "Most loan default projects stop at small datasets and basic models — this one tackles real big data at scale. \
+      By utilising PySpark across multiple CPU cores of my local machine across a million+ records, \
+      I simulated the Medallion Architecture in the Databricks environment for data engineering pipeline and in preparation for my Hyundai Internship. \
+      I learnt about different methods of feature engineering, state-of-the-art ML algorithms, and MLOps experiment tracking methodologies. \
+      Understanding the data dictionary also helped me gain insights to banks' credit risk business and gain important domain knowledge",
     image: project1,
-    tech: ["Python", "Pandas", "Scikit-learn", "Tableau"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    tech: [
+      "Pandas",
+      "Scikit-learn",
+      "Pyspark",
+      "XGBoost",
+      "RandomForest",
+      "Logistic Regression",
+      "WandB",
+      "Medallion Architecture",
+    ],
+    github:
+      "https://github.com/luuuneytunes12/Credit-Risk-Modeling-PySpark.git",
+    demo: "https://github.com/luuuneytunes12/Credit-Risk-Modeling-PySpark.git",
   },
   {
     id: 2,
     title: "BI Dashboard for Bikes Logistics ",
-    description: "ML-powered customer segmentation using clustering algorithms to identify distinct customer groups.",
+    description:
+      "ML-powered customer segmentation using clustering algorithms to identify distinct customer groups.",
     image: project2,
-    tech: ["Python", "NumPy", "K-Means", "Plotly"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    tech: ["Python", "NumPy", "Tableau", "SQL"],
+    github: "https://github.com/luuuneytunes12",
+    demo: "https://github.com/luuuneytunes12",
   },
   {
     id: 3,
     title: "Fitness Tracker Analysis",
-    description: "AI system to predict equipment failures and optimize maintenance schedules using IoT sensor data.",
+    description:
+      "AI system to predict equipment failures and optimize maintenance schedules using IoT sensor data.",
     image: project3,
     tech: ["Python", "TensorFlow", "SQL", "Power BI"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    github: "https://github.com/luuuneytunes12",
+    demo: "https://github.com/luuuneytunes12",
   },
 ];
 
@@ -115,31 +132,24 @@ export const Projects = () => {
                 ))}
               </div>
 
-              <div className="flex gap-3">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="flex-1"
-                  asChild
-                >
+              <div className="flex gap-3 relative z-10">
+                <Button size="sm" variant="outline" className="flex-1" asChild>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
                   </a>
                 </Button>
-                <Button
-                  size="sm"
-                  className="flex-1"
-                  asChild
-                >
+                <Button size="sm" className="flex-1" asChild>
                   <a
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Demo

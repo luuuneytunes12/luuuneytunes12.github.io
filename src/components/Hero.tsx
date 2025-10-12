@@ -17,8 +17,7 @@ export const Hero = () => {
   const currentTheme = resolvedTheme || theme || "dark";
 
   // Choose profile image based on theme
-  const profileImage =
-    currentTheme === "light" ? profileImageLight : profileImageDark;
+  const profileImage = profileImageDark;
 
   useEffect(() => {
     if (heroRef.current) {

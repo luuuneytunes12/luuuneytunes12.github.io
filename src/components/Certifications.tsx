@@ -11,7 +11,7 @@ const certifications = [
     id: 1,
     title: "IBM Data Science Professional Certificate",
     description:
-      "Comprehensive program covering Python, SQL, data visualization, machine learning, and data analysis techniques.",
+      "Program covering Python, SQL, data visualization, machine learning techniques",
     issuer: "IBM",
     skills: [
       "Python",
@@ -21,23 +21,19 @@ const certifications = [
       "Pandas",
       "Jupyter",
     ],
-    credentialUrl: "https://www.credly.com/badges/placeholder", // Placeholder URL
+    credentialUrl:
+      "https://www.coursera.org/professional-certificates/ibm-data-science", // Updated to actual program page
     completionDate: "2024",
   },
   {
     id: 2,
     title: "Google Business Intelligence Certificate",
     description:
-      "Advanced business intelligence program focusing on data modeling, dashboard creation, and strategic decision-making.",
+      "Advanced business intelligence program focusing on strategic dashboard creation.",
     issuer: "Google",
-    skills: [
-      "Tableau",
-      "SQL",
-      "Business Intelligence",
-      "Data Modeling",
-      "Dashboard Design",
-    ],
-    credentialUrl: "https://www.credly.com/badges/placeholder", // Placeholder URL
+    skills: ["Tableau", "SQL", "Business Intelligence", "Dashboard Design"],
+    credentialUrl:
+      "https://www.coursera.org/professional-certificates/google-business-intelligence", // Updated to actual program page
     completionDate: "2024",
   },
   {
@@ -46,14 +42,9 @@ const certifications = [
     description:
       "Foundational data analytics program covering data cleaning, analysis, and visualization using industry-standard tools.",
     issuer: "Google",
-    skills: [
-      "R Programming",
-      "Tableau",
-      "SQL",
-      "Data Cleaning",
-      "Statistical Analysis",
-    ],
-    credentialUrl: "https://www.credly.com/badges/placeholder", // Placeholder URL
+    skills: ["SQL", "Data Cleaning", "Excel", "Statistical Analysis"],
+    credentialUrl:
+      "https://www.coursera.org/professional-certificates/google-data-analytics", // Updated to actual program page
     completionDate: "2023",
   },
 ];
@@ -144,16 +135,19 @@ export const Certifications = () => {
                 ))}
               </div>
 
-              <Button size="sm" className="w-full" asChild>
-                <a
-                  href={cert.credentialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  View Certificate
-                </a>
-              </Button>
+              <div className="relative z-10">
+                <Button size="sm" className="w-full" asChild>
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    View Certificate
+                  </a>
+                </Button>
+              </div>
             </div>
           ))}
         </div>

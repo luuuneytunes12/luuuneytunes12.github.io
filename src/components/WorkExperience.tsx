@@ -13,7 +13,7 @@ const experiences = [
     period: "July 2025 - Present",
     location: "Singapore",
     description:
-      "Leading ML initiatives for predictive analytics platform. Developed ensemble models achieving 95% accuracy in customer churn prediction. Mentoring team of 3 junior data scientists.",
+      "Developed Pandas ETL ingestion scripts that empower technicians to seamlessly access component-level data for sophisticated issue tracking. Currently working on Databricks PoC documentation to break down its key functionalities and advantages.",
     color: "from-blue-500 to-cyan-500",
   },
   {
@@ -23,7 +23,7 @@ const experiences = [
     period: "Jan 2025 - May 2025",
     location: "Singapore",
     description:
-      "Built recommendation systems using collaborative filtering and deep learning. Optimized SQL queries reducing dashboard load time by 60%. Deployed models to production using Docker and AWS.",
+      "Simplified technical coaching by breaking down HTML and PHP concepts into clear, manageable lessons. Facilitated communication between students and faculty to turn feedback into curriculum improvements.",
     color: "from-cyan-500 to-blue-600",
   },
   {
@@ -33,7 +33,7 @@ const experiences = [
     period: "Dec 2022 - Jun 2023",
     location: "Singapore",
     description:
-      "Conducted exploratory data analysis and created interactive dashboards in Tableau. Automated reporting workflows with Python reducing manual work by 40%. Collaborated with cross-functional teams.",
+      "Designed structured Mandarin lesson plans for P3-S4 students by breaking down complex concepts into clear, understandable points. Collaborated with global cross-functional teams, demonstrating strong bilingual communication and stakeholder engagement skills.",
     color: "from-blue-600 to-indigo-600",
   },
 ];
