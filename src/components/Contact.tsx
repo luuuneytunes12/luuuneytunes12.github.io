@@ -94,6 +94,7 @@ export const Contact = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    console.log("Input changed:", e.target.name, e.target.value);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -171,7 +172,12 @@ export const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="card-gradient p-8 rounded-2xl space-y-6 contact-item"
+            className="card-gradient p-8 rounded-2xl space-y-6 contact-item relative z-20"
+            style={{ pointerEvents: "auto", position: "relative" }}
+            onClick={(e) => {
+              console.log("Form clicked");
+              e.stopPropagation();
+            }}
           >
             <div className="space-y-2">
               <label htmlFor="name" className="text-sm font-medium">
@@ -182,8 +188,14 @@ export const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+                onClick={(e) => {
+                  console.log("Name input clicked");
+                  e.stopPropagation();
+                }}
+                onFocus={() => console.log("Name input focused")}
                 placeholder="Your full name"
-                className="bg-background border-border"
+                className="bg-background border-border relative z-10"
+                style={{ pointerEvents: "auto" }}
                 required
               />
             </div>
@@ -199,7 +211,8 @@ export const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"
-                className="bg-background border-border"
+                className="bg-background border-border relative z-10"
+                style={{ pointerEvents: "auto" }}
                 required
               />
             </div>
@@ -215,7 +228,8 @@ export const Contact = () => {
                 onChange={handleChange}
                 placeholder="Tell me about your project or how I can help..."
                 rows={5}
-                className="bg-background border-border resize-none"
+                className="bg-background border-border resize-none relative z-10"
+                style={{ pointerEvents: "auto" }}
                 required
               />
             </div>

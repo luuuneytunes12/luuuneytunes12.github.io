@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import project4 from "@/assets/project-4.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,11 +15,7 @@ const projects = [
     id: 1,
     title: "Credit Risk Loan Default Modeling",
     description:
-      "Most loan default projects stop at small datasets and basic models — this one tackles real big data at scale. \
-      By utilising PySpark across multiple CPU cores of my local machine across a million+ records, \
-      I simulated the Medallion Architecture in the Databricks environment for data engineering pipeline and in preparation for my Hyundai Internship. \
-      I learnt about different methods of feature engineering, state-of-the-art ML algorithms, and MLOps experiment tracking methodologies. \
-      Understanding the data dictionary also helped me gain insights to banks' credit risk business and gain important domain knowledge",
+      "Most loan default projects focus on small datasets and basic models, but this project addresses real-world big data at scale. By leveraging PySpark on multiple CPU cores of my local machine, I processed over a million records and simulated the Medallion Architecture within the Databricks environment to build a robust data engineering pipeline. This experience prepared me for my Hyundai internship and deepened my knowledge of advanced feature engineering techniques, cutting-edge machine learning algorithms, and MLOps experiment tracking. Additionally, studying the data dictionary provided valuable insights into banks' credit risk business, enhancing my domain expertise.",
     image: project1,
     tech: [
       "Pandas",
@@ -29,6 +26,7 @@ const projects = [
       "Logistic Regression",
       "WandB",
       "Medallion Architecture",
+      "Databricks",
     ],
     github:
       "https://github.com/luuuneytunes12/Credit-Risk-Modeling-PySpark.git",
@@ -36,23 +34,40 @@ const projects = [
   },
   {
     id: 2,
-    title: "BI Dashboard for Bikes Logistics ",
+    title: "Ride Intelligence Dashboard: Bike Sharing Analytics",
     description:
-      "ML-powered customer segmentation using clustering algorithms to identify distinct customer groups.",
+      "Most business dashboards just visualize data — However, through this project, \
+      I attempted to use a business intelligence mindset to build a dynamic dashboard to guide \
+      geospatial analytics and station optimization, enabling Cyclistic to uncover targeted growth opportunities through deep analysis of seasonality, behavior, and city-wide trends.",
     image: project2,
-    tech: ["Python", "NumPy", "Tableau", "SQL"],
-    github: "https://github.com/luuuneytunes12",
-    demo: "https://github.com/luuuneytunes12",
+    tech: ["Tableau", "SQL", "Geospatial Analysis", "Google BigQuery"],
+    github:
+      "https://public.tableau.com/views/GoogleBIProjCyclistic/CyclisticStory?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    demo: "https://public.tableau.com/views/GoogleBIProjCyclistic/CyclisticStory?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
   },
   {
     id: 3,
     title: "Fitness Tracker Analysis",
     description:
-      "AI system to predict equipment failures and optimize maintenance schedules using IoT sensor data.",
+      "Via IoT, companies often struggle to understand how consumers' exercise patterns influence product use. I analyzed over 4 million Bellabeat fitness tracker records, gaining skills in data cleaning and transformation with SQL and Excel. By uncovering user behavior and peak activity trends, I helped optimize targeted marketing strategies, especially referral campaigns. This project highlights my ability to extract insights that drive data-driven decisions in health tech.",
     image: project3,
-    tech: ["Python", "TensorFlow", "SQL", "Power BI"],
-    github: "https://github.com/luuuneytunes12",
-    demo: "https://github.com/luuuneytunes12",
+    tech: ["Python", "Excel", "SQL"],
+    github:
+      "https://docs.google.com/document/d/1hJWr0IELszVjGbv7qoaIyrqwPKZCt8Lai54i-u4GzMs/edit?usp=sharing",
+    demo: "https://docs.google.com/document/d/1hJWr0IELszVjGbv7qoaIyrqwPKZCt8Lai54i-u4GzMs/edit?usp=sharing",
+  },
+  {
+    id: 4,
+    title: "RecycleLah Web Development Project",
+    description:
+      "Led design and deployment of Recyclelah, a gamified app to incentivize recycling, earning an A- grade. In this project, I led the data modeling \
+      and schema design process in Supabase. This not only allowed me to apply normalization schema principles for best practices in database design, but also   \
+       allowed me to think about the metrics users would want to track. \
+       I also developed a real-time, visually engaging recycling metrics dashboard using Vue.js, Chart.js, and CSS in attempts to boost user engagement through data visualization.",
+    image: project4,
+    tech: ["Vue.js", "Chart.js", "CSS", "HTML", "Supabase", "Data Modeling"],
+    github: "https://github.com/brejeshb/G6T6-WAD2",
+    demo: "https://youtu.be/GbHG0F7vkLE?si=OoEV7qpQLGF_ni-U",
   },
 ];
 

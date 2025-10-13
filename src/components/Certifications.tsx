@@ -22,7 +22,7 @@ const certifications = [
       "Jupyter",
     ],
     credentialUrl:
-      "https://www.coursera.org/professional-certificates/ibm-data-science", // Updated to actual program page
+      "https://www.coursera.org/account/accomplishments/professional-cert/Z3GUN0KKX88Y", // Updated to actual program page
     completionDate: "2024",
   },
   {
@@ -33,7 +33,7 @@ const certifications = [
     issuer: "Google",
     skills: ["Tableau", "SQL", "Business Intelligence", "Dashboard Design"],
     credentialUrl:
-      "https://www.coursera.org/professional-certificates/google-business-intelligence", // Updated to actual program page
+      "https://www.coursera.org/account/accomplishments/specialization/LTAJWDZ82NKA", // Updated to actual program page
     completionDate: "2024",
   },
   {
@@ -44,8 +44,8 @@ const certifications = [
     issuer: "Google",
     skills: ["SQL", "Data Cleaning", "Excel", "Statistical Analysis"],
     credentialUrl:
-      "https://www.coursera.org/professional-certificates/google-data-analytics", // Updated to actual program page
-    completionDate: "2023",
+      "https://www.coursera.org/account/accomplishments/specialization/NFYKQZDLWVAM", // Updated to actual program page
+    completionDate: "2024",
   },
 ];
 

@@ -37,6 +37,8 @@ import vueicon from "../assets/vue.png";
 import pandasIcon from "../assets/Pandas.png";
 import pytorchIcon from "../assets/pytorch.png";
 import numpyIcon from "../assets/numpy.png";
+import erdmodeling from "../assets/erd.png";
+import dockerIcon from "../assets/docker.png";
 
 // Icon mapping for easy reference
 const icons = {
@@ -72,6 +74,8 @@ const icons = {
   pandasIcon,
   pytorchIcon,
   numpyIcon,
+  erdmodeling,
+  dockerIcon,
 };
 
 // Skill data configuration - easy to add/modify
@@ -222,6 +226,14 @@ const skillsData = [
         description: "PostgreSQL administration and development platform",
         tags: ["PostgreSQL", "Database Client"],
       },
+      {
+        name: "Data Modeling (ERD)",
+        icon: "erdmodeling",
+        obtainedFrom: "Singapore Management University",
+        description:
+          "Entity-Relationship Diagram (ERD) design for database modeling",
+        tags: ["Database Design", "Data Modeling", "Normalization"],
+      },
     ],
   },
   {
@@ -297,6 +309,14 @@ const skillsData = [
         description:
           "DevOps platform for the entire software development lifecycle",
         tags: ["CI/CD", "Version Control"],
+      },
+      {
+        name: "Docker",
+        icon: "dockerIcon",
+        obtainedFrom: "Singapore Management University",
+        description:
+          "Containerization platform for developing and deploying applications",
+        tags: ["Containerization", "MLOps"],
       },
       {
         name: "BigQuery",
