@@ -133,7 +133,11 @@ export const Hero = () => {
               className="px-8 hover:scale-105 transition-transform duration-300"
               asChild
             >
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://drive.google.com/file/d/1KOIQpv5zMZkdy-q1Nqj0kYvUrS5DAI-Y/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FileText className="w-4 h-4 mr-2" />
                 View Resume
               </a>
