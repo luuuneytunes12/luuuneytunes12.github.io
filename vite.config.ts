@@ -14,8 +14,8 @@ export default defineConfig(({ command }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Only set base path for build (GitHub Pages)
-  base: command === 'build' ? '/weilun-portfolio-website/' : '/',
+  // For username.github.io repository, base path is root
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

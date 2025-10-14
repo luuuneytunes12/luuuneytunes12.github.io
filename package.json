@@ -9,9 +9,7 @@
     "build:local": "tsc && vite build --base=/",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "preview": "vite preview --port 4173 --host 0.0.0.0 --base=/weilun-portfolio-website/",
+    "preview": "vite preview --port 4173 --host 0.0.0.0",
     "preview:local": "vite preview --port 4173 --host 0.0.0.0"
   },
   "dependencies": {
