@@ -39,7 +39,7 @@ import pytorchIcon from "../assets/pytorch.png";
 import numpyIcon from "../assets/numpy.png";
 import erdmodeling from "../assets/erd.png";
 import dockerIcon from "../assets/docker.png";
-
+import optunaIcon from "../assets/optuna.png";
 // Icon mapping for easy reference
 const icons = {
   pythonIcon,
@@ -76,6 +76,7 @@ const icons = {
   numpyIcon,
   erdmodeling,
   dockerIcon,
+  optunaIcon,
 };
 
 // Skill data configuration - easy to add/modify
@@ -283,6 +284,14 @@ const skillsData = [
         description: "Combining multiple models for improved predictions",
         tags: ["Boosting", "Bagging"],
       },
+      {
+        name: "Optuna",
+        icon: "optunaIcon",
+        obtainedFrom: "Self Learning",
+        description: "Hyperparameter optimization framework",
+        tags: ["Hyperparameter Tuning", "Optimization"],
+      },
+
     ],
   },
   {

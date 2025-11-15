@@ -100,7 +100,7 @@ export const About = () => {
 
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold gradient-text">3+</h3>
+                <h3 className="text-3xl font-bold gradient-text">4+</h3>
                 <p className="text-muted-foreground">Projects Completed</p>
               </div>
               <div className="space-y-2">

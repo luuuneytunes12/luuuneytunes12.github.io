@@ -15,20 +15,22 @@ const projects = [
     id: 0,
     title: "Fraud Detection in Credit Card Transactions",
     description:
-      "This project aims to detect fraudulent credit card transactions using machine learning techniques. I used the Credit Card Fraud Detection dataset from Kaggle, which contains a mix of legitimate and fraudulent transactions. I built advanced learning algorithms, including LightGBM, Pytorch MLP Neural Network, and a Stacking Ensemble Model, and explored hyperparameter tuning methods such as WandB Hyperparameter Sweeps and Optuna. The final selected model achieved an extremely high $F_2$ score, capturing ~80% of fraudulent transactions, while minimizing false alarms (87% precision). ", 
-    image: project1,
+      "This project aims to detect fraudulent credit card transactions using machine learning techniques. I used the Credit Card Fraud Detection dataset from Kaggle, which contains a mix of legitimate and fraudulent transactions. I built advanced learning algorithms, including LightGBM, Pytorch MLP Neural Network, and a Stacking Ensemble Model, and explored hyperparameter tuning methods such as WandB Hyperparameter Sweeps and Optuna. The final selected model achieved an extremely high F2 score, capturing ~80% of fraudulent transactions, while minimizing false alarms (87% precision). ", 
+    image: 'src/assets/fraud.png',
     tech: [
       "LightGBM",
+      'Scikit-Learn', 
+      'SMOTE', 
       "Pytorch MLP Neural Network",
+      "Pytorch Lightning",
       "Stacking Ensemble Model",
-      "Feature Engineering",
-      "Evaluation Metrics",
-      "Credit Card Fraud Detection",
-      "Kaggle",
+      "Hyperparameter Sweeps",
+      "Optuna", 
+      'FastAPI', 
     ],
     github:
-      "https://github.com/luuuneytunes12/Credit-Risk-Modeling-PySpark.git",
-    demo: "https://github.com/luuuneytunes12/Credit-Risk-Modeling-PySpark.git",
+      "https://github.com/luuuneytunes12/Fraud-Detection-ML",
+    demo: "/Fraud-Detection-A-Hybrid-ML-Approach.pptx",
   },
   {
     id: 1,
@@ -184,6 +186,7 @@ export const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
+                    download={project.id === 0 ? "Fraud-Detection-A-Hybrid-ML-Approach.pptx" : undefined}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Demo
