@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
+import project0 from '@/assets/fraud.png';
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -16,7 +17,7 @@ const projects = [
     title: "Fraud Detection in Credit Card Transactions",
     description:
       "This project aims to detect fraudulent credit card transactions using machine learning techniques. I used the Credit Card Fraud Detection dataset from Kaggle, which contains a mix of legitimate and fraudulent transactions. I built advanced learning algorithms, including LightGBM, Pytorch MLP Neural Network, and a Stacking Ensemble Model, and explored hyperparameter tuning methods such as WandB Hyperparameter Sweeps and Optuna. The final selected model achieved an extremely high F2 score, capturing ~80% of fraudulent transactions, while minimizing false alarms (87% precision). ", 
-    image: 'src/assets/fraud.png',
+    image: project0,
     tech: [
       "LightGBM",
       'Scikit-Learn', 
