@@ -12,6 +12,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    id: 0,
+    title: "Fraud Detection in Credit Card Transactions",
+    description:
+      "This project aims to detect fraudulent credit card transactions using machine learning techniques. I used the Credit Card Fraud Detection dataset from Kaggle, which contains a mix of legitimate and fraudulent transactions. I built advanced learning algorithms, including LightGBM, Pytorch MLP Neural Network, and a Stacking Ensemble Model, and explored hyperparameter tuning methods such as WandB Hyperparameter Sweeps and Optuna. The final selected model achieved an extremely high $F_2$ score, capturing ~80% of fraudulent transactions, while minimizing false alarms (87% precision). ", 
+    image: project1,
+    tech: [
+      "LightGBM",
+      "Pytorch MLP Neural Network",
+      "Stacking Ensemble Model",
+      "Feature Engineering",
+      "Evaluation Metrics",
+      "Credit Card Fraud Detection",
+      "Kaggle",
+    ],
+    github:
+      "https://github.com/luuuneytunes12/Credit-Risk-Modeling-PySpark.git",
+    demo: "https://github.com/luuuneytunes12/Credit-Risk-Modeling-PySpark.git",
+  },
+  {
     id: 1,
     title: "Credit Risk Loan Default Modeling",
     description:
